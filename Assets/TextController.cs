@@ -163,18 +163,15 @@ public class TextController : MonoBehaviour {
 	}
 	
 	void hall_door() {
-		text.text = "You are at home in your bedroom and need to make your way to the door to leave for work.\n" +
-			"You see the bedroom Door, a Mirror and the Closet\n\n" +
-				"Press D to go to the Door, M to look at the Mirror, or C to C heck out the closet" ;
-		if (Input.GetKeyDown(KeyCode.D)) {myState = States.bedroom_door;}
-		else if (Input.GetKeyDown(KeyCode.M)) {myState = States.mirror;}
-		else if (Input.GetKeyDown(KeyCode.C)) {myState = States.closet;}
+		text.text = "The door is made of solid wood. You try the knob, but it's locked. What could be on the other side. You are curious, but have to get ready for work!\n\n" +
+			"Press Backspace to go back to the Hallway" ;
+		if (Input.GetKeyDown(KeyCode.back)) {myState = States.hallway;}
 	}
 	
 	void bathroom() {
-		text.text = "You are at home in your bedroom and need to make your way to the door to leave for work.\n" +
-			"You see the bedroom Door, a Mirror and the Closet\n\n" +
-				"Press D to go to the Door, M to look at the Mirror, or C to C heck out the closet" ;
+		text.text = "There is never enough room in here. And it always seems to be dirty, and a catch all for everything.\n" +
+			"Looking at the counter you see your cell phone. You also see a note on the mirror.\n\n" +
+				"Press C to pick up your Cell phone, Press M to look at the Mirror" ;
 		if (Input.GetKeyDown(KeyCode.M)) {myState = States.mirror_2;}
 		else if (Input.GetKeyDown(KeyCode.C)) {myState = States.cell_phone;}
 	}
@@ -182,58 +179,56 @@ public class TextController : MonoBehaviour {
 	
 	
 	void mirror_2() {
-		text.text = "You are at home in your bedroom and need to make your way to the door to leave for work.\n" +
-			"You see the bedroom Door, a Mirror and the Closet\n\n" +
-				"Press D to go to the Door, M to look at the Mirror, or C to C heck out the closet" ;
+		text.text = "You walk towards the mirror to read the note.\n" +
+			"The note says: You look fab today! Keep on Keepin' On. \n Where you drinking last night?\n\n" +
+				"Press B to step away from the mirror." ;
 		if (Input.GetKeyDown(KeyCode.B)) {myState = States.bathroom;}
 
 	}
 	
 	void cell_phone() {
-		text.text = "You are at home in your bedroom and need to make your way to the door to leave for work.\n" +
-			"You see the bedroom Door, a Mirror and the Closet\n\n" +
-				"Press D to go to the Door, M to look at the Mirror, or C to C heck out the closet" ;
+		text.text = "Thank goodness! I was looking for this! I thought I lost it.\n" +
+			"You see your tooth brush sitting on the counter with the toothpaste.\n\n" +
+				"Press H to leave without brushing your teeth, press B to brush your teeth." ;
 		if (Input.GetKeyDown(KeyCode.H)) {myState = States.hallway_1;}
 		else if (Input.GetKeyDown(KeyCode.B)) {myState = States.tooth_brush;}
 	}
 	
 	void tooth_brush() {
-		text.text = "You are at home in your bedroom and need to make your way to the door to leave for work.\n" +
-			"You see the bedroom Door, a Mirror and the Closet\n\n" +
-				"Press D to go to the Door, M to look at the Mirror, or C to C heck out the closet" ;
-		if (Input.GetKeyDown(KeyCode.M)) {myState = States.mirror_3;}
-		else if (Input.GetKeyDown(KeyCode.H)) {myState = States.hallway_2;}
+		text.text = "*brush brush brush*\n" +
+			"Ahh! Much better. I should put this toothbrish away, but it so much effort.\n\n" +
+				"Press P to put away the tooth brush, Press L to leave the tooth brush on the counter and go to the hallway" ;
+		if (Input.GetKeyDown(KeyCode.P)) {myState = States.mirror_3;}
+		else if (Input.GetKeyDown(KeyCode.L)) {myState = States.hallway_2;}
 }
 	
 	void mirror_3() {
-		text.text = "You are at home in your bedroom and need to make your way to the door to leave for work.\n" +
-			"You see the bedroom Door, a Mirror and the Closet\n\n" +
-				"Press D to go to the Door, M to look at the Mirror, or C to C heck out the closet" ;
+		text.text = "Opening the medicine cabinet you put the tooth brush and tooth paste away. Closing the cabinet, you check yourself out in the mirror. Shooting finger guns at yourself you say... \n" +
+			"How you doin'?\n\n" +
+				"Press H to go back out into the hallway. " ;
 		if (Input.GetKeyDown(KeyCode.H)) {myState = States.hallway_2;}
 
 	}
 	
 	void hallway_1() {
-		text.text = "You are at home in your bedroom and need to make your way to the door to leave for work.\n" +
-			"You see the bedroom Door, a Mirror and the Closet\n\n" +
-				"Press D to go to the Door, M to look at the Mirror, or C to C heck out the closet" ;
+		text.text = "I should really brush my teeth before going to work\n" +
+			"You see the way to the bathroom and the way to the kitchen\n\n" +
+				"Press B to go back to the bathroom and brush teeth, Press K to go to the kitchen." ;
 		if (Input.GetKeyDown(KeyCode.B)) {myState = States.tooth_brush;}
 		else if (Input.GetKeyDown(KeyCode.K)) {myState = States.kitchen_1;}
 
 	}
 	
 	void kitchen_1() {
-		text.text = "You are at home in your bedroom and need to make your way to the door to leave for work.\n" +
-			"You see the bedroom Door, a Mirror and the Closet\n\n" +
-				"Press D to go to the Door, M to look at the Mirror, or C to C heck out the closet" ;
+		text.text = "Yuck! I really need to brush my teeth\n\n" +
+				"Press B to go brush your teeth (I mean, come on!)" ;
 		if (Input.GetKeyDown(KeyCode.B)) {myState = States.tooth_brush;}
 
 	}
 	
 	void hallway_2() {
-		text.text = "You are at home in your bedroom and need to make your way to the door to leave for work.\n" +
-			"You see the bedroom Door, a Mirror and the Closet\n\n" +
-				"Press D to go to the Door, M to look at the Mirror, or C to C heck out the closet" ;
+		text.text = "Maybe I should have a shower, but I really have to get going. I'll have a nice long shower tonight. \n\n" +
+				"Press K to go into the kitchen. " ;
 		if (Input.GetKeyDown(KeyCode.K)) {myState = States.kitchen_2;}
 
 	}
