@@ -251,98 +251,91 @@ public class TextController : MonoBehaviour {
 		text.text = "You are at home in your bedroom and need to make your way to the door to leave for work.\n" +
 			"You see the bedroom Door, a Mirror and the Closet\n\n" +
 				"Press D to go to the Door, M to look at the Mirror, or C to C heck out the closet" ;
-		if (Input.GetKeyDown(KeyCode.D)) {myState = States.bedroom_door;}
-		else if (Input.GetKeyDown(KeyCode.M)) {myState = States.mirror;}
-		else if (Input.GetKeyDown(KeyCode.C)) {myState = States.closet;}
+		if (Input.GetKeyDown(KeyCode.C)) {myState = States.computer;}
+		else if (Input.GetKeyDown(KeyCode.K)) {myState = States.kitchen_2;}
 	}
 	
 	void computer() {
 		text.text = "You are at home in your bedroom and need to make your way to the door to leave for work.\n" +
 			"You see the bedroom Door, a Mirror and the Closet\n\n" +
 				"Press D to go to the Door, M to look at the Mirror, or C to C heck out the closet" ;
-		if (Input.GetKeyDown(KeyCode.D)) {myState = States.bedroom_door;}
-		else if (Input.GetKeyDown(KeyCode.M)) {myState = States.mirror;}
-		else if (Input.GetKeyDown(KeyCode.C)) {myState = States.closet;}
+		if (Input.GetKeyDown(KeyCode.F)) {myState = States.fridge;}
+		else if (Input.GetKeyDown(KeyCode.L)) {myState = States.livingroom;}
+		else if (Input.GetKeyDown(KeyCode.K)) {myState = States.kitchen_2;}
 	}
 	
 	void livingroom() {
 		text.text = "You are at home in your bedroom and need to make your way to the door to leave for work.\n" +
 			"You see the bedroom Door, a Mirror and the Closet\n\n" +
 				"Press D to go to the Door, M to look at the Mirror, or C to C heck out the closet" ;
-		if (Input.GetKeyDown(KeyCode.D)) {myState = States.bedroom_door;}
-		else if (Input.GetKeyDown(KeyCode.M)) {myState = States.mirror;}
-		else if (Input.GetKeyDown(KeyCode.C)) {myState = States.closet;}
+		if (Input.GetKeyDown(KeyCode.K)) {myState = States.kitchen_2;}
+		else if (Input.GetKeyDown(KeyCode.T)) {myState = States.cat;} // theo
+		else if (Input.GetKeyDown(KeyCode.C)) {myState = States.computer;}
+		else if (Input.GetKeyDown(KeyCode.P)) {myState = States.purse;}
 	}
 	
 	void purse() {
 		text.text = "You are at home in your bedroom and need to make your way to the door to leave for work.\n" +
 			"You see the bedroom Door, a Mirror and the Closet\n\n" +
 				"Press D to go to the Door, M to look at the Mirror, or C to C heck out the closet" ;
-		if (Input.GetKeyDown(KeyCode.D)) {myState = States.bedroom_door;}
-		else if (Input.GetKeyDown(KeyCode.M)) {myState = States.mirror;}
-		else if (Input.GetKeyDown(KeyCode.C)) {myState = States.closet;}
+		if (Input.GetKeyDown(KeyCode.K)) {myState = States.keys;}
 	}
 	
 	void cat() {
 		text.text = "You are at home in your bedroom and need to make your way to the door to leave for work.\n" +
 			"You see the bedroom Door, a Mirror and the Closet\n\n" +
 				"Press D to go to the Door, M to look at the Mirror, or C to C heck out the closet" ;
-		if (Input.GetKeyDown(KeyCode.D)) {myState = States.bedroom_door;}
-		else if (Input.GetKeyDown(KeyCode.M)) {myState = States.mirror;}
-		else if (Input.GetKeyDown(KeyCode.C)) {myState = States.closet;}
+		if (Input.GetKeyDown(KeyCode.L)) {myState = States.livingroom;}
+
 	}
 	
 	void keys() {
 		text.text = "You are at home in your bedroom and need to make your way to the door to leave for work.\n" +
 			"You see the bedroom Door, a Mirror and the Closet\n\n" +
 				"Press D to go to the Door, M to look at the Mirror, or C to C heck out the closet" ;
-		if (Input.GetKeyDown(KeyCode.D)) {myState = States.bedroom_door;}
-		else if (Input.GetKeyDown(KeyCode.M)) {myState = States.mirror;}
-		else if (Input.GetKeyDown(KeyCode.C)) {myState = States.closet;}
+		if (Input.GetKeyDown(KeyCode.C)) {myState = States.cat_2;} //chaos
+
 	}
 	
 	void cat_2() {
 		text.text = "You are at home in your bedroom and need to make your way to the door to leave for work.\n" +
 			"You see the bedroom Door, a Mirror and the Closet\n\n" +
 				"Press D to go to the Door, M to look at the Mirror, or C to C heck out the closet" ;
-		if (Input.GetKeyDown(KeyCode.D)) {myState = States.bedroom_door;}
-		else if (Input.GetKeyDown(KeyCode.M)) {myState = States.mirror;}
-		else if (Input.GetKeyDown(KeyCode.C)) {myState = States.closet;}
+		if (Input.GetKeyDown(KeyCode.F)) {myState = States.front_door;}
+		else if (Input.GetKeyDown(KeyCode.C)) {myState = States.cat_food;}
+
 	}
 	
 	void front_door1() {
 		text.text = "You are at home in your bedroom and need to make your way to the door to leave for work.\n" +
 			"You see the bedroom Door, a Mirror and the Closet\n\n" +
 				"Press D to go to the Door, M to look at the Mirror, or C to C heck out the closet" ;
-		if (Input.GetKeyDown(KeyCode.D)) {myState = States.bedroom_door;}
-		else if (Input.GetKeyDown(KeyCode.M)) {myState = States.mirror;}
-		else if (Input.GetKeyDown(KeyCode.C)) {myState = States.closet;}
+		if (Input.GetKeyDown(KeyCode.C)) {myState = States.cat_2;}
+
 	}
 	
 	void cat_food() {
 		text.text = "You are at home in your bedroom and need to make your way to the door to leave for work.\n" +
 			"You see the bedroom Door, a Mirror and the Closet\n\n" +
 				"Press D to go to the Door, M to look at the Mirror, or C to C heck out the closet" ;
-		if (Input.GetKeyDown(KeyCode.D)) {myState = States.bedroom_door;}
-		else if (Input.GetKeyDown(KeyCode.M)) {myState = States.mirror;}
-		else if (Input.GetKeyDown(KeyCode.C)) {myState = States.closet;}
+		if (Input.GetKeyDown(KeyCode.F)) {myState = States.front_door;}
+
 	}
 	
 	void front_door() {
 		text.text = "You are at home in your bedroom and need to make your way to the door to leave for work.\n" +
 			"You see the bedroom Door, a Mirror and the Closet\n\n" +
 				"Press D to go to the Door, M to look at the Mirror, or C to C heck out the closet" ;
-		if (Input.GetKeyDown(KeyCode.D)) {myState = States.bedroom_door;}
-		else if (Input.GetKeyDown(KeyCode.M)) {myState = States.mirror;}
-		else if (Input.GetKeyDown(KeyCode.C)) {myState = States.closet;}
+		if (Input.GetKeyDown(KeyCode.L)) {myState = States.leave;}
+
 	}
 	
 	void leave() {
 		text.text = "You are at home in your bedroom and need to make your way to the door to leave for work.\n" +
 			"You see the bedroom Door, a Mirror and the Closet\n\n" +
 				"Press D to go to the Door, M to look at the Mirror, or C to C heck out the closet" ;
-		if (Input.GetKeyDown(KeyCode.D)) {myState = States.bedroom_door;}
-		else if (Input.GetKeyDown(KeyCode.M)) {myState = States.mirror;}
-		else if (Input.GetKeyDown(KeyCode.C)) {myState = States.closet;}
+		if (Input.GetKeyDown(KeyCode.D)) {myState = States.bedroom_door;} // restart
+		else if (Input.GetKeyDown(KeyCode.M)) {myState = States.mirror;} // exit
+
 	}
 }
