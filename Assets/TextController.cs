@@ -119,7 +119,7 @@ public class TextController : MonoBehaviour {
 	void bedroom() {
 		text.text = "You are at home in your bedroom and need to make your way to the door to leave for work." +
 					"You see the bedroom Door, a Mirror and the Closet\n\n" +
-					"Press D to go to the Door, M to look at the Mirror, or C to C heck out the closet" ;
+					"Press D to go to the Door, M to look at the Mirror, or C to Check out the closet" ;
 		if (Input.GetKeyDown(KeyCode.D)) {myState = States.bedroom_door;}
 		else if (Input.GetKeyDown(KeyCode.M)) {myState = States.mirror;}
 		else if (Input.GetKeyDown(KeyCode.C)) {myState = States.closet;}
@@ -127,21 +127,21 @@ public class TextController : MonoBehaviour {
 
 	void closet() {
 		text.text = "So many clothes! I should pick something quickly so I can get to work but maybe I should check out my mirror first?\n\n" +
-				"Press D to get Dressed, B to return to Bedroom" ;
+				"Press D to get Dressed, Backspace to return to Bedroom" ;
 		if (Input.GetKeyDown(KeyCode.D)) {myState = States.clothing;}
-		else if (Input.GetKeyDown(KeyCode.B)) {myState = States.bedroom;}
+		else if (Input.GetKeyDown(KeyCode.Backspace)) {myState = States.bedroom;}
 	}
 
 	void bedroom_door() {
 		text.text = "I can't leave for work like this! I'm in my pjs! Unless I am dreaming <pinch>. Ouch! Nope\n\n" +
-				"Press B to go go back to the Bedroom" ;
-		if (Input.GetKeyDown(KeyCode.B)) {myState = States.bedroom;}
+				"Press Backspace to go go back to the Bedroom" ;
+		if (Input.GetKeyDown(KeyCode.Backspace)) {myState = States.bedroom;}
 	}
 
 	void mirror() {
 		text.text = "I don't really have time to do my hair but maybe I can clip it up so I am not such a wreck. Gorgeous! But I better get back to getting ready to leave.\n\n" +
-				"Press B to return to the Bedroom" ;
-		if (Input.GetKeyDown(KeyCode.B)) {myState = States.bedroom;}
+			"Press Backspace to return to the Bedroom" ;
+		if (Input.GetKeyDown(KeyCode.Backspace)) {myState = States.bedroom;}
 		fixedhair=1;
 	}
 
@@ -185,8 +185,8 @@ public class TextController : MonoBehaviour {
 	void mirror_2() {
 		text.text = "You walk towards the mirror to read the note. " +
 			"The note says: You look fab today! Keep on Keepin' On. \n Where you drinking last night?\n\n" +
-				"Press B to step away from the mirror." ;
-		if (Input.GetKeyDown(KeyCode.B)) {myState = States.bathroom;}
+				"Press Backspace to step away from the mirror." ;
+		if (Input.GetKeyDown(KeyCode.Backspace)) {myState = States.bathroom;}
 
 	}
 
@@ -217,8 +217,8 @@ public class TextController : MonoBehaviour {
 	void hallway_1() {
 		text.text = "I should really brush my teeth before going to work. " +
 			"You see the way to the bathroom and the way to the kitchen\n\n" +
-				"Press B to go back to the bathroom and brush teeth, Press K to go to the kitchen." ;
-		if (Input.GetKeyDown(KeyCode.B)) {myState = States.tooth_brush;}
+				"Press Backspace to go back to the bathroom and brush teeth, Press K to go to the kitchen." ;
+		if (Input.GetKeyDown(KeyCode.Backspace)) {myState = States.tooth_brush;}
 		else if (Input.GetKeyDown(KeyCode.K)) {myState = States.kitchen_1;}
 
 	}
@@ -247,21 +247,21 @@ public class TextController : MonoBehaviour {
 
 	void fridge() {
 		text.text = "There is not really enough time for breakfast this morning. Not that is any ever really in the fridge. You open it anyway. Nope, nothing there. \n\n" +
-				"Press K to step away from the fridge, Press C to go to the Computer." ;
+			"Press Backspace to step away from the fridge, Press C to go to the Computer." ;
 		if (Input.GetKeyDown(KeyCode.C)) {myState = States.computer;}
-		else if (Input.GetKeyDown(KeyCode.K)) {myState = States.kitchen_2;}
+		else if (Input.GetKeyDown(KeyCode.Backspace)) {myState = States.kitchen_2;}
 	}
 
 	void computer() {
-		text.text = "You sit down at the computer and double check the weather a few times before flicking off the screen. You really should get going. \n\n" + "Press F to check out the Fridge, K to go to the Kitchen and L to go to the 'Livingroom'" ;
+		text.text = "You sit down at the computer and double check the weather a few times before flicking off the screen. You really should get going. \n\n" + "Press F to check out the Fridge, Backspace to go to the Kitchen and L to go to the 'Livingroom'" ;
 		if (Input.GetKeyDown(KeyCode.F)) {myState = States.fridge;}
 		else if (Input.GetKeyDown(KeyCode.L)) {myState = States.livingroom;}
-		else if (Input.GetKeyDown(KeyCode.K)) {myState = States.kitchen_2;}
+		else if (Input.GetKeyDown(KeyCode.Backspace)) {myState = States.kitchen_2;}
 	}
 
 	void livingroom() {
-		text.text = "From the livingroom you can see the computer and the kitchen. You also notice Theo the cat waiting patiently to be petted. Your purse is on the coffee table.\n\n" + "Press K to go to the Kitchen, C to go to the Computer, P to grab your Purse, or T to say Good-Morning to Theo the Cat" ;
-		if (Input.GetKeyDown(KeyCode.K)) {myState = States.kitchen_2;}
+		text.text = "From the livingroom you can see the computer and the kitchen. You also notice Theo the cat waiting patiently to be petted. Your purse is on the coffee table.\n\n" + "Press Backspace to go to the Kitchen, C to go to the Computer, P to grab your Purse, or T to say Good-Morning to Theo the Cat" ;
+		if (Input.GetKeyDown(KeyCode.Backspace)) {myState = States.kitchen_2;}
 		else if (Input.GetKeyDown(KeyCode.T)) {myState = States.cat;} // theo
 		else if (Input.GetKeyDown(KeyCode.C)) {myState = States.computer;}
 		else if (Input.GetKeyDown(KeyCode.P)) {myState = States.purse;}
@@ -275,8 +275,8 @@ public class TextController : MonoBehaviour {
 
 	void cat() {
 		text.text = "Hello Theo my little squeeker! How are you this morning? Theo squeeks his little meow. I have to go to work little buddy. \n\n" +
-				"Press L to go back to the 'Livingroom'" ;
-		if (Input.GetKeyDown(KeyCode.L)) {myState = States.livingroom;}
+			"Press Backspace to go back to the 'Livingroom'" ;
+		if (Input.GetKeyDown(KeyCode.Backspace)) {myState = States.livingroom;}
 
 	}
 
@@ -310,14 +310,14 @@ public class TextController : MonoBehaviour {
 	}
 
 	void front_door() {
-		text.text = "Finally you get to the door, put on your shoes, grab a sweater and head outside.\n\n" +
+		text.text = "You get to the door, put on your shoes, grab a sweater and head outside.\n\n" +
 				"Press L to lock the door and head off to work! Finally!" ;
 		if (Input.GetKeyDown(KeyCode.L)) {myState = States.leave;}
 
 	}
 
 	void leave() {
-		text.text = "Off to work I go!\n\n" +
+		text.text = "Off to work I go!\n\nThanks for Playing! This was made for a beginner course in Unity Development." +
 				"Press P to Play again" ;
 		if (Input.GetKeyDown(KeyCode.P)) {Start();} // restart
 		// maybe something in here to go to screen showing time choices etc
